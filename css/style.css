@@ -196,7 +196,8 @@ section{
     .share{
         left: 8%;
         transition: .2s;
-    }}
+    }
+}
 
 @media (max-width: 1370px){
     header{
@@ -291,18 +292,19 @@ section{
     .btn{
         padding: 5px 10px;
     }
-}
-@media (max-width: 396px){
-         :root{
-        --big-font: 2rem;
-        --p-font: 1rem;
-        transition: .2s;}
-    .btn{
-        padding: 10px 10px;
-        font-size: 12px;
+
     }
-    
-         }
+    @media (max-width: 396px){
+        :root{
+       --big-font: 2rem;
+       --p-font: 1rem;
+       transition: .2s;}
+   .btn{
+        font-size: 12px;
+       padding: 10px 10px;
+   }
+        }
+
 
 .home-img img{
     animation: imgg 2s ease-in-out infinite;
