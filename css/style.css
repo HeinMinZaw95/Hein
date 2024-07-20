@@ -285,7 +285,7 @@ section{
 }
 @media (max-width: 468px){
     :root{
-        --big-font: 3.5rem;
+        --big-font: 3rem;
         --p-font: 1rem;
         transition: .2s;}
     .btn{
@@ -294,17 +294,15 @@ section{
 }
 @media (max-width: 396px){
          :root{
-        --big-font: 3rem;
+        --big-font: 2rem;
         --p-font: 1rem;
         transition: .2s;}
     .btn{
-        padding: 10px 0px;
+        padding: 10px 10px;
+        font-size: 12px;
     }
+    
          }
-        
-
-    }
-}
 
 .home-img img{
     animation: imgg 2s ease-in-out infinite;
