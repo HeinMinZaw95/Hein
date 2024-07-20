@@ -227,6 +227,7 @@ section{
 }
 @media (max-width: 1000px){
     .navbar a{
+        display: none;
         margin: 0 15px;
     }
     :root{
@@ -239,12 +240,16 @@ section{
     .share{
         display: none; 
     }
+    .share{
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+    }
     section{
-        padding: 70px 4%;
+        padding: 150px 4%;
     }
     header{
         padding: 11px 4%;
-        background: #2d2d2d;
+        background: #d8d8d8;
     }
     .home{
         height: auto;
@@ -271,7 +276,25 @@ section{
     }
 }
 
+@media (max-width: 566px){
+    :root{
+        --big-font: 4rem;
+        --p-font: 1rem;
+        transition: .2s;
+    }
 }
+@media (max-width: 468px){
+    :root{
+        --big-font: 3.5rem;
+        --p-font: 1rem;
+        transition: .2s;
+    .btn{
+        padding: 5px 10px;
+    }
+
+    }
+}
+
 .home-img img{
     animation: imgg 2s ease-in-out infinite;
     animation-delay: 2s;
