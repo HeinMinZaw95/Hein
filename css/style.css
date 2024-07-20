@@ -291,6 +291,15 @@ section{
     .btn{
         padding: 5px 10px;
     }
+@media (max-width: 396px)
+         :root{
+        --big-font: 3rem;
+        --p-font: 1rem;
+        transition: .2s;
+    .btn{
+        padding: 10px 0px;
+    }
+        
 
     }
 }
