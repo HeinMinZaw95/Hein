@@ -260,13 +260,10 @@ section{
         transition: .2s;
     }
 
-@media (max-width: 1000px){
+@media (max-width: 1000px)
     .share{
-        display: none; 
-    }
-    .share{
-        margin-bottom: 0px;
-        padding-bottom: 0px;
+        bottom: 1rem;
+        left: 5px;
     }
     section{
         padding: 150px 4%;
