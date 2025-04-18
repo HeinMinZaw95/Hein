@@ -1,0 +1,281 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --bg_color: rgb(245, 225, 250);
+}
+body{
+    background: url(img/ocean.jpg);
+    background-position: center;
+    background-size: cover
+}
+/*Reveal Start*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+section{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section:nth-child(1){
+    color: #fff;
+}
+section:nth-child(2){
+    color:  #1D212B;
+    background: #fff;
+}
+section:nth-child(3){
+    color: #fff;
+
+}
+section:nth-child(4){
+    color: #1D212B ;
+    background: #fff;
+}
+section .container{
+    margin: 100px;
+
+}
+section h1{
+    font-size: 60px;
+}
+section h2{
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+}
+section .cards{
+    display: flex;
+}
+section .cards .text-card{
+    background: skyblue;
+    margin: 20px;
+    padding: 20px;
+}
+section .cards .text-card h3{
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 10px ;
+}
+
+@media (max-width: 900px){
+    section h1{
+        font-size: 40px;
+    }
+
+    section .cards{
+        flex-direction: column;
+    }
+}
+
+.reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 2s  ease;
+}
+.reveal.active{
+    transform: translateY(0);
+    opacity: 1;
+}
+/*Reveal End*/
+
+header{
+ background-image: linear-gradient(to bottom, #00000088, #00000060) ,url(img/6.jpg) ;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: color-burn;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: gold;
+    height: 100px;
+    transition: 2s 1s;
+    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.158);
+    z-index: 10;
+    position: fixed;
+    width: 100%;
+}
+header span{
+    color: aqua;
+}
+header:hover{
+    background-image:linear-gradient(to bottom, #000000ff, #000000aa) ,url(img/6.jpg) ;;
+}
+header:hover nav{
+    display: flex;
+    width: 100%;
+}
+nav{
+    display: none;
+    width: 0%;
+    background-color: rgba(255, 217, 0, 0.548);
+    height: 10vh;
+    align-items: center;
+    transition: 2s;
+
+    
+}
+nav ul{
+    width: 100%;
+    justify-content:space-evenly ;
+    display: flex;
+    list-style: none;
+    margin: 10px;
+}
+nav ul a{
+    padding: 5px;
+    text-decoration: none;
+    color: white;
+    border-radius: 2px;
+    transition: 0.2s;
+}
+nav ul a:hover{
+    background-color: black;
+    color: gold;
+}
+.banner{
+    position: relative;
+    display: flex;
+    align-items:end;
+    height: 100vh;
+    overflow: hidden;
+}
+.banner iframe{
+
+    position: absolute;
+    width: 100%;
+    border: none;
+    height: 120vh;
+    z-index: -1;
+}
+.banner h1{
+    padding: 50px;
+    color: gold;
+    animation: from_left 3s ease-out 0s forwards;
+    opacity: 0;
+    font-size: 3vw;
+}
+
+@keyframes from_left{
+    from{
+        opacity: 0;
+        color: white;
+        transform: translateX(-100px);
+    }
+    to{
+        opacity: 1;
+        color: gold;
+        transform: translateX(0);
+    }
+}
+.about{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px;
+    height: 100dvh;
+    justify-content: center;
+    align-items: center;
+    gap: 5vw;
+
+}
+.side_img{
+    flex-grow: 1;
+    background:url(img/7.jpg) ;
+    background-size: cover;
+    background-position: center;
+    width: 300px;
+    height: 300px;
+    aspect-ratio: 16 / 9;
+
+
+}
+.abouttxt{
+
+    flex-grow: 1;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items:flex-start;
+}
+.abouttxt h2{
+    font-size: 4vw;
+}
+.abouttxt p{
+    font-size: 1.5vw;
+}
+.side_img::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: var(--bg_color);
+    backdrop-filter: blur(10px);
+    z-index: -5;
+    border-radius: 50px 50px 0 0 ;
+
+}
+.more{
+    height: 100dvh;
+}
+.some{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px;
+    height: 100dvh;
+    justify-content: center;
+    align-items: center;
+    gap: 5vw;
+
+}
+.some .side_img{
+    flex-grow: 1;
+    background: url(img/Breeding.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 300px;
+    height: 300px;
+    aspect-ratio: 16 / 9;
+
+
+}
+.some .abouttxt{
+
+    flex-grow: 1;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items:flex-start;
+}
+.some .abouttxt h2{
+    font-size: 4vw;
+    color: gold;
+}
+.some .abouttxt p{
+    font-size: 1.5vw;
+    color: #ffffff;
+}
+.some .side_img::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: black;
+    opacity: 0.9;
+    backdrop-filter: blur(100px);
+    z-index: -5;
+    border-radius:0 0 50px 50px ;
+
+
+}
