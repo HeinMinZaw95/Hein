@@ -177,7 +177,7 @@ nav ul a:hover{
 .about{
     display: flex;
     flex-wrap: wrap;
-    padding: 50px;
+    padding: 5vw;
     height: 100dvh;
     justify-content: center;
     align-items: center;
@@ -201,14 +201,14 @@ nav ul a:hover{
     width: 300px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 1vw;
     align-items:flex-start;
 }
 .abouttxt h2{
     font-size: 4vw;
 }
 .abouttxt p{
-    font-size: 1.5vw;
+    font-size: clamp(1rem, 1.5vw, 2rem );
 }
 .side_img::before{
     content: "";
@@ -224,12 +224,144 @@ nav ul a:hover{
 
 }
 .more{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5vw;
     height: 100dvh;
+    justify-content: center;
+    align-items: center;
+    gap: 5vw;
 }
+.moretxt{
+    flex-grow: 1;
+    width: 300px;
+}
+.moretxt  h2{
+    font-size: 4vw;
+    color: gold;
+}
+.moretxt p{
+    font-size: clamp(1rem, 1.5vw, 2rem );
+    color: #fff;
+}
+/* Swiper Start */
+.container{
+    flex-grow: 1;
+    width: 300px;
+    height: auto;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.container .title{
+    text-align: center;
+    color: #fff;
+    font-family: 'Poppins' , sans-serif;
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.title span{
+    font-weight: bold;
+}
+
+.swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+ 
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 350px;
+  height: 300px;
+
+
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 16/9;
+}
+
+.swiper-slide button{
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: none;
+  outline: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  background: linear-gradient(45deg, #ff416c, #ff4b2b);
+  color: #fff;
+  font-size: clamp(1rem, 1.5vw, 2rem );
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: none;
+
+}
+
+.swiper-slide button:hover{
+  background: linear-gradient(45deg, #ff4b2b, #ff416c);
+  box-shadow: 0 6px 20px rgba(255, 75, 43, 0.6);
+  transform: translateX(-50%) scale(1.05);
+}
+
+.swiper-slide-visible.swiper-slide-active button{
+  display: block;
+}
+.swiper .swiper-button-next{
+    border-radius: 5px 0 0 5px;
+}
+.swiper .swiper-button-prev{
+    border-radius: 0 5px 5px 0;
+}
+
+.swiper .swiper-button-next,
+.swiper .swiper-button-prev{
+  color: gold;
+  background: skyblue;
+  padding: 5px;
+  text-shadow: 0 1px 5px #00000055;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  transition: .5s ease;
+
+}
+.swiper .swiper-button-next:hover{
+    color: skyblue;
+    background: gold;
+}
+.swiper .swiper-button-prev:hover{
+    color: skyblue;
+    background: gold;
+}
+
+.swiper .swiper-button-next {
+  margin-right: -10px;
+}
+.swiper .swiper-button-prev {
+  margin-left: -10px;
+}
+.swiper-pagination .swiper-pagination-bullet{
+  width: 17px;
+  height: 17px;
+  background: #fff;
+  opacity: 1;
+}
+
+.swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active{
+  border: 3px solid #fff;
+  background: #d13639;
+}
+/* Swiper End */
 .some{
     display: flex;
     flex-wrap: wrap;
-    padding: 50px;
+    padding: 5vw;
     height: 100dvh;
     justify-content: center;
     align-items: center;
@@ -261,7 +393,7 @@ nav ul a:hover{
     color: gold;
 }
 .some .abouttxt p{
-    font-size: 1.5vw;
+    font-size: clamp(1rem, 1.5vw, 2rem );
     color: #ffffff;
 }
 .some .side_img::before{
