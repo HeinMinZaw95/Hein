@@ -47,3 +47,9 @@ var swiper = new Swiper(".mySwiper", {
       PrevEl: ".swiper-button-prev"
     }
   });
+
+  var loader = document.getElementById("preloader");
+
+  window.addEventListener("load", function(){
+    loader.style.display = "none";
+  })
